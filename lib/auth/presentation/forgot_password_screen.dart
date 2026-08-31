@@ -3,6 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:frontend/auth/presentation/login_screen.dart';
+import 'package:frontend/auth/presentation/otp_screen.dart';
 import 'package:frontend/widgets/custom_text_filed.dart';
 import 'package:frontend/widgets/wave_clipper.dart';
 
@@ -135,7 +136,9 @@ class _ForgotPassword extends State<ForgotPassword>{
                             height: 45,
                             width: double.infinity,
                             child: ElevatedButton(onPressed: (){
-
+                              Navigator.push(context,
+                              MaterialPageRoute(builder: (builder) => OtpScreen())
+                              );
                             },
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: Color(0xFF8145DD),
